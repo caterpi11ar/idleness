@@ -1,7 +1,7 @@
 {
   "name": "@caterpillar-soft/viper",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packageManager": "pnpm@10.27.0",
   "description": "Minimal Viper-inspired configuration library for TypeScript, powered by Zod and JSON5",
   "author": {
