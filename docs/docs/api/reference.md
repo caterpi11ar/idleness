@@ -9,7 +9,7 @@ sidebar_position: 1
 Factory function that creates and returns a new `Viper` instance.
 
 ```typescript
-import { createViper } from 'viper'
+import { createViper } from '@caterpillar-soft/viper'
 
 const v = createViper()
 const v = createViper({ schema, keyDelimiter: '.' })
@@ -29,7 +29,7 @@ const v = createViper({ schema, keyDelimiter: '.' })
 The main configuration manager. Can also be constructed directly:
 
 ```typescript
-import { Viper } from 'viper'
+import { Viper } from '@caterpillar-soft/viper'
 
 const v = new Viper()
 const v = new Viper({ schema })

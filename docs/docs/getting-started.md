@@ -7,7 +7,7 @@ sidebar_position: 2
 ## Installation
 
 ```bash
-pnpm add viper
+pnpm add @caterpillar-soft/viper
 ```
 
 viper requires `zod` and `json5` as runtime dependencies (installed automatically).
@@ -15,7 +15,7 @@ viper requires `zod` and `json5` as runtime dependencies (installed automaticall
 ## Basic Usage
 
 ```typescript
-import { createViper } from 'viper'
+import { createViper } from '@caterpillar-soft/viper'
 
 const v = createViper()
 
@@ -68,7 +68,7 @@ v.get('port') // 8080
 ## With Zod Validation
 
 ```typescript
-import { createViper } from 'viper'
+import { createViper } from '@caterpillar-soft/viper'
 import { z } from 'zod'
 
 const schema = z.object({
@@ -104,7 +104,7 @@ v.bindEnv('database.url', 'DATABASE_URL')
 ## Putting It All Together
 
 ```typescript
-import { createViper } from 'viper'
+import { createViper } from '@caterpillar-soft/viper'
 import { z } from 'zod'
 
 const schema = z.object({

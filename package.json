@@ -1,5 +1,5 @@
 {
-  "name": "viper",
+  "name": "@caterpillar-soft/viper",
   "type": "module",
   "version": "0.1.0",
   "packageManager": "pnpm@10.27.0",
@@ -9,6 +9,9 @@
     "email": "daiqin1046@gmail.com"
   },
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",

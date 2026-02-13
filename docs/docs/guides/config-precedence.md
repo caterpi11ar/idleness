@@ -18,7 +18,7 @@ viper manages configuration from multiple sources. When you call `v.get(key)`, i
 ## Example
 
 ```typescript
-import { createViper } from 'viper'
+import { createViper } from '@caterpillar-soft/viper'
 
 const v = createViper()
 

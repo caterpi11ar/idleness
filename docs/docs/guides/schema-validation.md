@@ -11,7 +11,7 @@ viper optionally integrates with [Zod](https://zod.dev) to validate configuratio
 Pass a Zod schema when creating the Viper instance:
 
 ```typescript
-import { createViper } from 'viper'
+import { createViper } from '@caterpillar-soft/viper'
 import { z } from 'zod'
 
 const schema = z.object({

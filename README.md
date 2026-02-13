@@ -17,13 +17,13 @@ Configuration comes from multiple layered sources — defaults, config file, env
 ## Install
 
 ```bash
-pnpm add viper
+pnpm add @caterpillar-soft/viper
 ```
 
 ## Quick Start
 
 ```typescript
-import { createViper } from 'viper'
+import { createViper } from '@caterpillar-soft/viper'
 import { z } from 'zod'
 
 const schema = z.object({
@@ -86,7 +86,7 @@ When reading a key, sources are checked in this order:
 ### Construction
 
 ```typescript
-import { Viper, createViper } from 'viper'
+import { Viper, createViper } from '@caterpillar-soft/viper'
 
 const v = new Viper()
 const v = new Viper({ schema, keyDelimiter: '.' })
