@@ -1,16 +1,26 @@
 {
   "name": "idleness",
-  "version": "1.0.0",
+  "type": "module",
+  "version": "0.1.0",
   "private": true,
   "packageManager": "pnpm@10.27.0",
-  "description": "基于 RSS + MCP 的自动化内容运营框架",
+  "description": "Minimal Viper-inspired configuration library for TypeScript, powered by Zod and JSON5",
   "author": {
     "name": "caterpi11ar",
     "email": "daiqin1046@gmail.com"
   },
   "license": "MIT",
-  "keywords": [],
-  "main": "index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "engines": {
     "node": ">=22.0.0",
     "pnpm": ">=9.6.0"
@@ -18,8 +28,15 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky",
+    "build": "tsup src/index.ts --format esm --dts",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "lint:fix": "eslint --ext .ts --fix  --cache .",
     "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "json5": "^2.2.3",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^7.2.0",
@@ -28,9 +45,9 @@
     "@types/node": "^25.0.10",
     "eslint": "^9.39.2",
     "husky": "^9.1.7",
-    "json5": "^2.2.3",
     "lint-staged": "^16.2.7",
+    "tsup": "^8.5.0",
     "typescript": "^5.9.3",
-    "zod": "^4.3.6"
+    "vitest": "^3.2.1"
   }
 }

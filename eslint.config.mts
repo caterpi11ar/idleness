@@ -1,7 +1,7 @@
 import antfu from '@antfu/eslint-config'
 
 export default antfu({
-  ignores: ['node_modules'],
+  ignores: ['node_modules', '*.md', 'docs/**'],
   rules: {
     'no-console': 'off',
     'no-new': 'off',

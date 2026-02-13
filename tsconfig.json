@@ -1,15 +1,12 @@
 {
   "compilerOptions": {
-    "incremental": true,
-    "composite": true,
     "target": "ES2022",
     "lib": [
-      "ES2022",
-      "DOM",
-      "DOM.Iterable"
+      "ES2022"
     ],
     "moduleDetection": "force",
     "useDefineForClassFields": true,
+    "rootDir": "./src",
     "module": "ESNext",
     "moduleResolution": "bundler",
     "paths": {
@@ -21,6 +18,7 @@
     "noUnusedParameters": true,
     "declaration": true,
     "declarationMap": true,
+    "outDir": "./dist",
     "sourceMap": true,
     "esModuleInterop": true,
     "verbatimModuleSyntax": true,

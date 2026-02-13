@@ -1,47 +1,36 @@
 ---
 sidebar_position: 1
+slug: /
 ---
 
-# Tutorial Intro
+# Introduction
 
-Let's discover **Docusaurus in less than 5 minutes**.
+**idleness** is a minimal, Viper-inspired configuration management library for TypeScript. It draws inspiration from Go's [spf13/viper](https://github.com/spf13/viper) and brings the same layered configuration model to the TypeScript ecosystem.
 
-## Getting Started
+## Why idleness?
 
-Get started by **creating a new site**.
+Managing application configuration often involves juggling multiple sources: config files, environment variables, defaults, and runtime overrides. idleness unifies them into a single registry with clear precedence rules.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+### Core Concepts
 
-### What you'll need
+- **Layered sources** — defaults, config file, environment variables, and explicit overrides are merged with well-defined priority
+- **Dot-notation keys** — access nested config via `database.host` instead of `config.database.host`
+- **Case-insensitive** — `DATABASE.HOST`, `database.host`, and `Database.Host` all resolve to the same key
+- **JSON5 config files** — comments, trailing commas, and unquoted keys in your config files
+- **Zod validation** — optional schema validation at read and write time
+- **Atomic writes** — config file writes use temp file + rename for crash safety
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+### Precedence Order
 
-## Generate a new site
+When you read a key, idleness checks sources in this order (first match wins):
 
-Generate a new Docusaurus site using the **classic template**.
+1. **Override** — `v.set(key, value)`
+2. **Environment variable** — bound or automatic env lookup
+3. **Config file** — parsed JSON5 file
+4. **Default** — `v.setDefault(key, value)`
 
-The classic template will automatically be added to your project after you run the command:
+## Next Steps
 
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+- [Getting Started](./getting-started) — install and write your first config
+- [Guides](./guides/config-precedence) — learn how each feature works
+- [API Reference](./api/reference) — full method documentation
