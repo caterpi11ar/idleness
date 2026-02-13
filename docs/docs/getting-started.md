@@ -7,15 +7,15 @@ sidebar_position: 2
 ## Installation
 
 ```bash
-pnpm add idleness
+pnpm add viper
 ```
 
-idleness requires `zod` and `json5` as runtime dependencies (installed automatically).
+viper requires `zod` and `json5` as runtime dependencies (installed automatically).
 
 ## Basic Usage
 
 ```typescript
-import { createViper } from 'idleness'
+import { createViper } from 'viper'
 
 const v = createViper()
 
@@ -68,7 +68,7 @@ v.get('port') // 8080
 ## With Zod Validation
 
 ```typescript
-import { createViper } from 'idleness'
+import { createViper } from 'viper'
 import { z } from 'zod'
 
 const schema = z.object({
@@ -104,7 +104,7 @@ v.bindEnv('database.url', 'DATABASE_URL')
 ## Putting It All Together
 
 ```typescript
-import { createViper } from 'idleness'
+import { createViper } from 'viper'
 import { z } from 'zod'
 
 const schema = z.object({

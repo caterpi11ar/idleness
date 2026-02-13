@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Environment Variables
 
-idleness supports reading configuration from environment variables, with higher priority than config files and defaults.
+viper supports reading configuration from environment variables, with higher priority than config files and defaults.
 
 ## Automatic Environment
 
@@ -38,7 +38,7 @@ v.bindEnv('database.url', 'DATABASE_URL')
 v.bindEnv('redis.host', 'REDIS_HOST', 'CACHE_HOST') // tries each in order
 ```
 
-Multiple env var names can be bound to a single key. idleness checks them in order and returns the first defined value.
+Multiple env var names can be bound to a single key. viper checks them in order and returns the first defined value.
 
 ## Binding Without Arguments
 

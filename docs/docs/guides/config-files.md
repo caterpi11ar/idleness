@@ -4,13 +4,13 @@ sidebar_position: 2
 
 # Config Files
 
-idleness uses [JSON5](https://json5.org/) for config files, which supports comments, trailing commas, and unquoted keys.
+viper uses [JSON5](https://json5.org/) for config files, which supports comments, trailing commas, and unquoted keys.
 
 ## Reading Config Files
 
 ### File Discovery
 
-Tell idleness where to search and what to look for:
+Tell viper where to search and what to look for:
 
 ```typescript
 const v = createViper()
@@ -23,7 +23,7 @@ v.addConfigPath('.') // then current directory
 v.readInConfig()
 ```
 
-idleness searches each path in order for `{configName}.{configType}` and uses the first match.
+viper searches each path in order for `{configName}.{configType}` and uses the first match.
 
 ### Explicit Path
 

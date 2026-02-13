@@ -4,14 +4,14 @@ sidebar_position: 4
 
 # Schema Validation
 
-idleness optionally integrates with [Zod](https://zod.dev) to validate configuration at read and write time.
+viper optionally integrates with [Zod](https://zod.dev) to validate configuration at read and write time.
 
 ## Defining a Schema
 
 Pass a Zod schema when creating the Viper instance:
 
 ```typescript
-import { createViper } from 'idleness'
+import { createViper } from 'viper'
 import { z } from 'zod'
 
 const schema = z.object({
@@ -57,7 +57,7 @@ await v.writeConfig() // throws ZodError
 
 ## Without Schema
 
-The schema is entirely optional. Without it, idleness works like plain Viper with no runtime validation:
+The schema is entirely optional. Without it, viper works like plain Viper with no runtime validation:
 
 ```typescript
 const v = createViper() // no schema

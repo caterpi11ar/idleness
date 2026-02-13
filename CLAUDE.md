@@ -15,7 +15,7 @@ pnpm typecheck    # 类型检查
 
 ## Project Overview
 
-idleness is a Viper-inspired TypeScript configuration library. It provides layered config management (defaults, config file, env vars, overrides) with dot-notation key access, Zod validation, and JSON5 parsing.
+viper is a Viper-inspired TypeScript configuration library. It provides layered config management (defaults, config file, env vars, overrides) with dot-notation key access, Zod validation, and JSON5 parsing.
 
 ## Architecture
 

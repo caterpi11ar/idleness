@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Config Precedence
 
-idleness manages configuration from multiple sources. When you call `v.get(key)`, it checks each source in priority order and returns the first match.
+viper manages configuration from multiple sources. When you call `v.get(key)`, it checks each source in priority order and returns the first match.
 
 ## Priority Order (highest to lowest)
 
@@ -18,7 +18,7 @@ idleness manages configuration from multiple sources. When you call `v.get(key)`
 ## Example
 
 ```typescript
-import { createViper } from 'idleness'
+import { createViper } from 'viper'
 
 const v = createViper()
 

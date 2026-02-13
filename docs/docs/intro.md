@@ -5,11 +5,11 @@ slug: /
 
 # Introduction
 
-**idleness** is a minimal, Viper-inspired configuration management library for TypeScript. It draws inspiration from Go's [spf13/viper](https://github.com/spf13/viper) and brings the same layered configuration model to the TypeScript ecosystem.
+**viper** is a minimal, Viper-inspired configuration management library for TypeScript. It draws inspiration from Go's [spf13/viper](https://github.com/spf13/viper) and brings the same layered configuration model to the TypeScript ecosystem.
 
-## Why idleness?
+## Why viper?
 
-Managing application configuration often involves juggling multiple sources: config files, environment variables, defaults, and runtime overrides. idleness unifies them into a single registry with clear precedence rules.
+Managing application configuration often involves juggling multiple sources: config files, environment variables, defaults, and runtime overrides. viper unifies them into a single registry with clear precedence rules.
 
 ### Core Concepts
 
@@ -22,7 +22,7 @@ Managing application configuration often involves juggling multiple sources: con
 
 ### Precedence Order
 
-When you read a key, idleness checks sources in this order (first match wins):
+When you read a key, viper checks sources in this order (first match wins):
 
 1. **Override** — `v.set(key, value)`
 2. **Environment variable** — bound or automatic env lookup

@@ -1,4 +1,4 @@
-# idleness
+# viper
 
 Minimal Viper-inspired configuration library for TypeScript, powered by Zod and JSON5.
 
@@ -17,13 +17,13 @@ Configuration comes from multiple layered sources — defaults, config file, env
 ## Install
 
 ```bash
-pnpm add idleness
+pnpm add viper
 ```
 
 ## Quick Start
 
 ```typescript
-import { createViper } from 'idleness'
+import { createViper } from 'viper'
 import { z } from 'zod'
 
 const schema = z.object({
@@ -86,7 +86,7 @@ When reading a key, sources are checked in this order:
 ### Construction
 
 ```typescript
-import { Viper, createViper } from 'idleness'
+import { Viper, createViper } from 'viper'
 
 const v = new Viper()
 const v = new Viper({ schema, keyDelimiter: '.' })

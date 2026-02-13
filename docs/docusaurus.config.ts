@@ -3,7 +3,7 @@ import type { Config } from '@docusaurus/types'
 import { themes as prismThemes } from 'prism-react-renderer'
 
 const config: Config = {
-  title: 'idleness',
+  title: 'viper',
   tagline: 'Minimal Viper-inspired configuration library for TypeScript',
   favicon: 'img/favicon.ico',
 
@@ -42,7 +42,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'idleness',
+      title: 'viper',
       items: [
         {
           type: 'docSidebar',
@@ -51,7 +51,7 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: 'https://github.com/caterpi11ar/idleness',
+          href: 'https://github.com/caterpi11ar/viper',
           label: 'GitHub',
           position: 'right',
         },
@@ -78,7 +78,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/caterpi11ar/idleness',
+              href: 'https://github.com/caterpi11ar/viper',
             },
           ],
         },
